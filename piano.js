@@ -65,13 +65,14 @@ class Piano {
 
             for(let note in this.keysState.black[i]){
                 const path = new Path2D();
+				
 
                 path.rect((startOffset + 31 * y) - this.config.blackKeys.width/2, midheight, this.config.blackKeys.width, this.config.blackKeys.height);
                 
                 if(this.keysState.black[i][note]){
-                    this.context.fillStyle = "#000";    
+                    this.context.fillStyle = "#000000";    
                 } else {
-                    this.context.fillStyle = "#404040";    
+                    this.context.fillStyle = "#4040".concat(40+i*2);    
                 }
                 
                 this.context.fill(path);
